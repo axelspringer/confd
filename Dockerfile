@@ -48,7 +48,8 @@ RUN \
   chmod +x /usr/local/bin/dumb-init
 
 RUN \
-  mkdir -p /etc/confd/{conf.d,templates}
+  mkdir -p /etc/confd/conf.d && \
+  mkdir -p /etc/confd/conf.d/templates
 
 VOLUME ["/etc/confd"]
 
